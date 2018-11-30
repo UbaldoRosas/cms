@@ -2,7 +2,7 @@
     
     defined('BASEPATH') OR exit('No direct script access allowed');
     
-    class Cms extends CI_Model {
+    class Cms_model extends CI_Model {
     
     
     }
