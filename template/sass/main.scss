@@ -9,24 +9,26 @@
 // Vendors and external stylesheets
 
 // Base stuff
-@import "base/normalize";
+// @import "base/normalize";
 @import "base/typography";
 @import "base/helpers";
 @import "base/basic";
 @import "base/sprites";
 
 // Components and modules
-@import "components/forms";
-@import "components/buttons";
+// @import "components/forms";
+// @import "components/buttons";
 
 // Layout related stylesheets
 @import "layout/header";
 @import "layout/footer";
 @import "layout/template";
+@import "layout/material";
 
 
 // Page-specific stylesheets
 @import "pages/home";
+@import "pages/account";
 
 // Responsive
 @import "responsive/tablet";

@@ -14,18 +14,7 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/estilos.min.css">
 </head>
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row"></div>
-        </header>
-        <div class="mdl-layout__drawer mdl-color--blue-grey-800 mdl-color-text--white">
-            <span class="mdl-layout-title">Title</span>
-            <nav class="mdl-navigation mdl-color-text--white">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
-    
+    <?php
+        $this->load->view($section);
+        $this->load->view('templates/footer');
+    ?>

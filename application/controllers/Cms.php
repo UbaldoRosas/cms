@@ -19,7 +19,7 @@ class Cms extends CI_Controller {
             'section' => 'login/index', 
         );
 
-        $this->load->view('main', $data);
+        $this->load->view('index', $data);
     }
 
 }
