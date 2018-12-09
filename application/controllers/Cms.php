@@ -13,13 +13,22 @@ class Cms extends CI_Controller {
 
     public function index()
     {   
-        $this->util->has_logged('log');
+        // $this->util->has_logged('log');
 
         $data = array(
             'section' => 'login/index', 
         );
 
         $this->load->view('index', $data);
+    }
+
+    public function dashboard()
+    {
+        $data = array(
+            'section' => 'dashboard', 
+        );
+
+        $this->load->view('main', $data);
     }
 
 }

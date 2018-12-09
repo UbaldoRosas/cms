@@ -7,25 +7,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CMS</title>
     <!-- Material Design Lite -->
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="<?php echo base_url();?>css/estilos.min.css">
 </head>
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row"></div>
-        </header>
-        <div class="mdl-layout__drawer mdl-color--blue-grey-800 mdl-color-text--white">
-            <span class="mdl-layout-title">Title</span>
-            <nav class="mdl-navigation mdl-color-text--white">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
+    <div class="page-wrapper">
+        <aside class="mdc-drawer">
+            <div class="mdc-drawer__header">
+                <h3 class="mdc-drawer__title">CMS</h3>
+                <h6 class="mdc-drawer__subtitle">your@email.io</h6>
+            </div>
+            <div class="mdc-drawer__content">
+                <nav class="mdc-list">
+                    <h6 class="mdc-list-group__subheader">Recursos</h6>
+                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">image</i>
+                        <span class="mdc-list-item__text">Imágenes</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">videocam</i>
+                        <span class="mdc-list-item__text">Videos</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">class</i>
+                        <span class="mdc-list-item__text">Cursos</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">font_download</i>
+                        <span class="mdc-list-item__text">Fuentes</span>
+                    </a>
+    
+                    <hr class="mdc-list-divider">
+                    <!-- <h6 class="mdc-list-group__subheader">Labels</h6> -->
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">group</i>
+                        <span class="mdc-list-item__text">Usuarios</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                        <i class="material-icons logout mdc-list-item__graphic" aria-hidden="true">exit_to_app</i>
+                        <span class="mdc-list-item__text">Cerrar sesión</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+        <div class="mdc-drawer-app-content">
+            <header class="mdc-top-app-bar app-bar" id="app-bar">
+                <div class="mdc-top-app-bar__row">
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                        <span class="mdc-top-app-bar__title">Imágenes</span>
+                    </section>
+                </div>
+            </header>
+    
+            <main class="main-content" id="main-content">
+                <div class="mdc-top-app-bar--fixed-adjust">
+                    <!-- App Content -->
     

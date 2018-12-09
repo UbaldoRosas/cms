@@ -110,17 +110,27 @@ var util = (() => {
     };
 })();
 
-// Variables útiles
-const isMobile = util.isMobile();
-const isSafari = util.isSafari;
-const _$ = query => document.querySelector(query);
-const _$$ = query => document.querySelectorAll(query);
 
+/*=============================================
+=            Variables útiles            =
+=============================================*/
+
+    // Variables para dispositivos móviles
+    const isMobile = util.isMobile();
+
+    // Selección de elementos
+    const _$  = query => document.querySelector(query);
+    const _$$ = query => document.querySelectorAll(query);
+
+
+/*=====  End of Variables útiles  ======*/
+console.log(mdc);
 const material = (function() {
+
     const autoAttachTo = function automaticInstatination (component, elementSelector) {
 
         const elements = _$$(elementSelector);
-        const length = elements.length;
+        const length   = elements.length;
 
         for (let i = 0; i < length; i += 1) {
             component.attachTo(elements[i]);
@@ -133,11 +143,15 @@ const material = (function() {
         attachTo : autoAttachTo,
 
         init: function() {
-            //init text fields
+
             autoAttachTo(window.mdc.textField.MDCTextField, '.mdc-text-field');
             autoAttachTo(window.mdc.select.MDCSelect, '.mdc-select');
             autoAttachTo(window.mdc.checkbox.MDCCheckbox, '.mdc-checkbox');
+            autoAttachTo(window.mdc.textField.MDCTextFieldHelperText, '.mdc-text-field-helper-text');
+            autoAttachTo(window.mdc.list.MDCList, '.mdc-list');
+
         }
+
     }
     
 })();
@@ -159,7 +173,7 @@ const section = (() => {
 })();
 
 $(document).ready(function () {
-    // material.init();
+    material.init();
 });
 
 $(window).on('load', () => {

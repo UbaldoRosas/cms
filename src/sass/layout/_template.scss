@@ -18,6 +18,11 @@
     }
 }
 
-main {
-    padding-top: 64px;
+.logout {
+    transform: rotate(180deg);
+}
+
+.page-wrapper {
+    display: flex;
+    height: 100vh;
 }

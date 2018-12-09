@@ -112,9 +112,14 @@ var util = function () {
     };
 }();
 
-// Variables útiles
+/*=============================================
+=            Variables útiles            =
+=============================================*/
+
+// Variables para dispositivos móviles
 var isMobile = util.isMobile();
-var isSafari = util.isSafari;
+
+// Selección de elementos
 var _$ = function _$(query) {
     return document.querySelector(query);
 };
@@ -122,7 +127,10 @@ var _$$ = function _$$(query) {
     return document.querySelectorAll(query);
 };
 
+/*=====  End of Variables útiles  ======*/
+console.log(mdc);
 var material = function () {
+
     var autoAttachTo = function automaticInstatination(component, elementSelector) {
 
         var elements = _$$(elementSelector);
@@ -138,11 +146,14 @@ var material = function () {
         attachTo: autoAttachTo,
 
         init: function init() {
-            //init text fields
+
             autoAttachTo(window.mdc.textField.MDCTextField, '.mdc-text-field');
             autoAttachTo(window.mdc.select.MDCSelect, '.mdc-select');
             autoAttachTo(window.mdc.checkbox.MDCCheckbox, '.mdc-checkbox');
+            autoAttachTo(window.mdc.textField.MDCTextFieldHelperText, '.mdc-text-field-helper-text');
+            autoAttachTo(window.mdc.list.MDCList, '.mdc-list');
         }
+
     };
 }();
 
@@ -162,7 +173,7 @@ var section = function () {
 }();
 
 $(document).ready(function () {
-    // material.init();
+    material.init();
 });
 
 $(window).on('load', function () {});
