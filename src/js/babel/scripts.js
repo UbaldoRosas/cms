@@ -172,6 +172,7 @@ var section = function () {
 
 $(document).ready(function () {
     material.init();
+    $('#myTable').DataTable();
 });
 
 $(window).on('load', function () {});

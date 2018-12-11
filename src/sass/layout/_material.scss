@@ -12,6 +12,10 @@
 
 .mdc {
     &-drawer {
-        
+        &-app {
+            &-content {
+                width: 100%;
+            }
+        }
     }
 }
